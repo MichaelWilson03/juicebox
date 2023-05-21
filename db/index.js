@@ -1,6 +1,14 @@
 const { Client } = require("pg"); // imports the pg module
 require("dotenv").config();
-const client = new Client(process.env.DATABASE_URL);
+const client = new Client(
+  process.env.NODE_ENV === "dev"
+    ? {
+        database: " juciebox-dev",
+        password: "Kaiden0304!",
+        user: "michaelwilson",
+      }
+    : process.env.DATABASE_URL
+);
 
 /**
  * USER Methods
