@@ -3,9 +3,9 @@ require("dotenv").config();
 const client = new Client(
   process.env.NODE_ENV === "dev"
     ? {
-        database: " juciebox-dev",
-        password: "Kaiden0304!",
-        user: "michaelwilson",
+        database: "juicebox_o6wi",
+        password: "mOiI4z0BxloOB1ZOHkSMY59YyWQdiHLY",
+        user: "juicebox_o6wi_user",
       }
     : process.env.DATABASE_URL
 );
